@@ -1,0 +1,19 @@
+<div class = 'container'>
+   <h1>Ask question</h1>
+
+   <form (ngSubmit)='onSubmit()'>
+
+      <div class = 'form-group' [formGroup]='search'>
+         <label for = 'name'>Question:</label>
+         <input type = 'text' formControlName='name'>
+      </div>
+      <br />
+      <button type='submit' class='btn btn-success'>Ask</button>
+
+   </form>
+   <br /><br />
+
+   <label>Answer :&nbsp;</label>{{ result_answer }}<br />
+
+
+</div>
