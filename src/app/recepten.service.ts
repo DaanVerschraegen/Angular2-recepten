@@ -12,18 +12,15 @@ export class ReceptenService {
 
    	constructor() {}
 
-   	// get answer
-   	searchEightball(question: string): string {
-		let answer:string = ''
+   	// voeg aan localstorage indien nieuw recept (op basis van naam)
+   	addRecept(naam: string, caloriën: string, tijdInMin: number): void {
+		var recept = new Recepten(this.naam, this.caloriën, this.tijdInMin);
 
-       	if (localStorage.getItem(question) != null) {
-           	answer = localStorage.getItem(question);
+       	if (localStorage.getItem(recept) != null) {
+           	answer = localStorage.getItem(recept);
        	}
    		else {
-       		let randomNumber:number = Math.floor(Math.random() * Math.floor(this.answers.length));
-       		answer = this.answers[randomNumber];
-       		localStorage.setItem(question, answer);
+       		localStorage.setItem(this.naam, recept);
 		}
-      	return answer;
    	}
 }

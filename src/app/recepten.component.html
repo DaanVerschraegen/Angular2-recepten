@@ -1,23 +1,23 @@
 <div class = 'container'>
-   <h1>Ask question</h1>
+   <h1>Voeg recept toe</h1>
 
    <form (ngSubmit)='onSubmit()'>
 
       <div class = 'form-group' [formGroup]='search'>
-         <label for = 'name'>Naam:</label>
-         <input type = 'text' formControlName='name'><br/>
+         <label for = 'naam'>Naam:</label>
+         <input type = 'text' formControlName='naam'><br/>
          <label for = 'caloriën'>Caloriën:</label>
          <input type = 'text' formControlName='caloriën'><br/>
-         <label for = 'caloriën'>Caloriën:</label>
-         <input type = 'text' formControlName='caloriën'>
+         <label for = 'tijdInMin'>TijdInMin:</label>
+         <input type = 'number' formControlName='tijdInMin'>
       </div>
       <br />
-      <button type='submit' class='btn btn-success'>Ask</button>
+      <button type='submit' class='btn btn-success'>Voeg toe</button>
 
    </form>
    <br /><br />
 
-   <label>Answer :&nbsp;</label>{{ result_answer }}<br />
+   <label>Recepten :&nbsp;</label>{{ result_list }}<br />
 
 
 </div>
