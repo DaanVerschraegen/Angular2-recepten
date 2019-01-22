@@ -10,13 +10,13 @@ import { ReceptenService } from './recepten.service';
 })
 
 export class ReceptenComponent {
-    search: FormGroup;
+    recept: FormGroup;
     result_list: Recepten[];
 
     ngOnInit() {
        this.recept = new FormGroup({
          naam: new FormControl(''),
-         caloriën: new FormControl(''),
+         calorien: new FormControl(''),
          tijdInMin: new FormControl(0)
        });
    }
@@ -25,6 +25,7 @@ export class ReceptenComponent {
 
    onSubmit() {
        this.ReceptenService.addRecept(this.recept.value.naam, 
-       this.recept.value.caloriën, this.recept.value.tijdInMin);
+       this.recept.value.calorien, this.recept.value.tijdInMin);
+       this.result_list = this.ReceptenService.toonRecepten();
    }
 }

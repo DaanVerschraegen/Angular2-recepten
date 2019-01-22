@@ -1,8 +1,8 @@
 export class Recepten {
 
-   constructor (public naam: string, public caloriën: string, public tijdInMin: number) {}
+   constructor (public naam: string, public calorien: string, public tijdInMin: number) {}
 
    toForm(): string {
-      return `naam=${this.naam}&caloriën=${this.caloriën}&tijdInMin=${this.tijdInMin}`;
+      return `naam=${this.naam}&calorien=${this.calorien}&tijdInMin=${this.tijdInMin}`;
    }
 }

@@ -1,21 +1,14 @@
 "use strict";
-exports.__esModule = true;
-var Recepten = /** @class */ (function () {
-    function Recepten(naam, calori, n, tijdInMin) {
+var Recepten = (function () {
+    function Recepten(naam, calorien, tijdInMin) {
         this.naam = naam;
-        this.calori = calori;
+        this.calorien = calorien;
         this.tijdInMin = tijdInMin;
     }
     Recepten.prototype.toForm = function () {
-        return "naam=" + this.naam + "&calori\uFFFDn=" + this.calori;
-        n;
+        return "naam=" + this.naam + "&calorien=" + this.calorien + "&tijdInMin=" + this.tijdInMin;
     };
     return Recepten;
 }());
 exports.Recepten = Recepten;
- & tijdInMin;
-$;
-{
-    this.tijdInMin;
-}
-";\n   }\n}\n";
+//# sourceMappingURL=recepten.js.map
