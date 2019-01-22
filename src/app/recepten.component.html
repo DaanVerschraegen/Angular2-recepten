@@ -4,8 +4,12 @@
    <form (ngSubmit)='onSubmit()'>
 
       <div class = 'form-group' [formGroup]='search'>
-         <label for = 'name'>Question:</label>
-         <input type = 'text' formControlName='name'>
+         <label for = 'name'>Naam:</label>
+         <input type = 'text' formControlName='name'><br/>
+         <label for = 'caloriën'>Caloriën:</label>
+         <input type = 'text' formControlName='caloriën'><br/>
+         <label for = 'caloriën'>Caloriën:</label>
+         <input type = 'text' formControlName='caloriën'>
       </div>
       <br />
       <button type='submit' class='btn btn-success'>Ask</button>

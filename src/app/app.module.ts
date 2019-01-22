@@ -5,19 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent }  from './app.component';
-import { EightballComponent } from './eightball.component';
-import { EightballService } from './eightball.service';
+import { ReceptenComponent } from './recepten.component';
+import { ReceptenService } from './recepten.service';
 
 // define the routes
 const appRoutes: Routes = [
-  { path: '**', component: EightballComponent }
+  { path: '**', component: ReceptenComponent }
 ];
 
 @NgModule({
   imports:      [ BrowserModule, HttpClientModule,
                 FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, EightballComponent],
-  providers:    [ EightballService ],
+  declarations: [ AppComponent, ReceptenComponent],
+  providers:    [ ReceptenService ],
   bootstrap:    [ AppComponent ]
 })
 

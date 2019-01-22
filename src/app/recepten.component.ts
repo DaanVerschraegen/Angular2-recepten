@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
-import { Eightball } from './eightball';
-import { EightballService } from './eightball.service';
+import { Recepten } from './recepten';
+import { ReceptenService } from './recepten.service';
 
 @Component ({
-   selector: 'eightball',
-   templateUrl: './eightball.component.html'
+   selector: 'recepten',
+   templateUrl: './recepten.component.html'
 })
 
-export class EightballComponent {
+export class ReceptenComponent {
     search: FormGroup;
     result_question: string;
     result_answer: string;
@@ -20,7 +20,7 @@ export class EightballComponent {
        });
    }
 
-   constructor(private EightballService: EightballService) {}
+   constructor(private ReceptenService: ReceptenService) {}
 
    onSubmit() {
        this.result_answer = this.EightballService.searchEightball(this.search.value.name);
