@@ -14,13 +14,13 @@ export class ReceptenService {
 
    	// voeg aan localstorage indien nieuw recept (op basis van naam)
    	addRecept(naam: string, caloriën: string, tijdInMin: number): void {
-		var recept = new Recepten(this.naam, this.caloriën, this.tijdInMin);
+		var recept = new Recepten(naam, caloriën, tijdInMin);
 
        	if (localStorage.getItem(recept) != null) {
            	answer = localStorage.getItem(recept);
        	}
    		else {
-       		localStorage.setItem(this.naam, recept);
+       		localStorage.setItem(naam, JSON.stringify(recept));
 		}
    	}
 }

@@ -11,18 +11,20 @@ import { ReceptenService } from './recepten.service';
 
 export class ReceptenComponent {
     search: FormGroup;
-    result_question: string;
-    result_answer: string;
+    result_list: Recepten[];
 
     ngOnInit() {
-       this.search = new FormGroup({
-         name: new FormControl('')
+       this.recept = new FormGroup({
+         naam: new FormControl(''),
+         caloriën: new FormControl(''),
+         tijdInMin: new FormControl(0)
        });
    }
 
    constructor(private ReceptenService: ReceptenService) {}
 
    onSubmit() {
-       this.result_answer = this.EightballService.searchEightball(this.search.value.name);
+       this.ReceptenService.addRecept(this.recept.value.naam, 
+       this.recept.value.caloriën, this.recept.value.tijdInMin);
    }
 }
